@@ -1,0 +1,28 @@
+/* about.css */
+
+
+.about_space {
+    padding-top: 2em;   
+}
+
+.fullbleed_portrait_container {        
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+
+
+
+.skill {
+    padding: 1em;
+    text-align: center;
+}   
+
+
+
+h2 {
+    font-size: 2em; 
+    padding: 1em 0 1em 0;
+    /*color: #E8E2E2;*/
+}
+

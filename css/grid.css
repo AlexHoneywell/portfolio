@@ -1,0 +1,142 @@
+
+
+/*make grid class "float" columns next to each other
+and then clear the floats so elements so not hover/overlap etc*/
+.grid:after {
+	content: "";
+	display: block; /*appear as block elements*/
+	clear: both; /*clear floats*/
+}
+
+
+/* use box model for mozilla and webkit browsers? with appropriate pre-fix 
+so box-model will be read properly
+"everything, everything after and everything before*/
+*, *:after, *:before {		
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*box bracket selects attribute (class) that finds anything 
+that starts with (^) a property (col)
+- a class property that asks for a code*/
+[class^='col-'] {
+	float: left;
+	/*padding: 0;*/
+    
+}
+
+
+.content_span {
+    margin-left: auto;
+    margin-right: auto;
+    width: 767px; 
+    /*
+    padding-left: 1em;
+    padding-right: 1em;
+    */
+}
+
+.content_span:after { /* must operate in the same way as a grid */
+    content: "";
+	display: block; /*appear as block elements*/
+	clear: both; /*clear floats*/
+}
+
+
+
+
+
+
+
+
+/*Column Widths /////////////////////////////////////////////////////////////////////////////////////////*/
+
+.col-4of4 {
+	width: 100%;  
+}
+
+.col-3of4 {
+    width: 75%;
+}
+
+.col-2of4 {
+    width: 50%;
+}
+
+.col-1of4 {
+    width: 25%;
+}
+.col-1of2 { 
+    width: 50%;
+}   
+
+.col-1of3 { 
+    width: 33.3333%;
+}
+
+.col-2of2 { 
+    width: 100%;   
+}
+
+
+/* Persona Grid */
+
+.col-persona_container {
+    33.3333%;
+}
+
+.col-persona_text {
+    100%;
+}
+
+.col-persona_image {
+    100%;
+}
+
+/*Media Queries ///////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Desktop + Tablet-Landscape */
+@media only screen and (min-width: 1024px) { 
+
+    
+    
+}
+
+/* Tablet-Portrait */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}  
+
+
+
+
+/* Phone-Landscape */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+  
+} 
+
+/* Phone-Landscape and Smaller */
+@media only screen and (max-width: 781px) { 
+    .content_span {
+        width: 100%;  
+    }
+    
+
+    
+} 
+
+
+/*Phone-Portrait */
+@media only screen and (max-width: 479px) { 
+    .col-1of2 { 
+        width: 100%;
+    } 
+    
+    .col-1of3 { 
+        width: 100%;
+    }
+    
+} 
+
